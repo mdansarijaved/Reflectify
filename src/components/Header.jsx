@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export default function Header() {
     return (
-        <main className='bg-black/20 p-4 sticky top-0'>
+        <main className=' p-4 sticky top-0'>
             <header className='flex  items-center '>
                 <button>
                     <AiOutlineMenu className='text-4xl text-[#FFe34a]    ' />
