@@ -8,7 +8,7 @@ export default function Header() {
         <main className='bg-black/20 p-4 sticky top-0'>
             <header className='flex  items-center '>
                 <button>
-                    <AiOutlineMenu className='text-4xl text-white    ' />
+                    <AiOutlineMenu className='text-4xl text-[#FFe34a]    ' />
                 </button>
                 <div className='flex-1'>
                     <Image src="/images/logo.svg" alt="logo" width={180} height={100} className=' invert m-auto ' />
