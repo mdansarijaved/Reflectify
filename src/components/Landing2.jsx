@@ -3,10 +3,12 @@ import Image from 'next/image'
 export default function Landing2() {
     return (
         <>
-            <div className="bg-black  flex justify-evenly py-36 items-center  ">
-                <div className='text-2xl font-medium w-80 text-white'>
-                    <p>Reflectify is your live online journaling destination.</p>
-                    <p className='mb-7'>Start adding memories of you and your friends on Reflectify.</p>
+            <div className="bg-black  flex flex-wrap justify-evenly py-36 items-center  ">
+                <div className='text-2xl font-medium w-80 text-white px-6'>
+                    <div className='flex flex-wrap  mb-7'>
+                        <p>Reflectify is your live online journaling destination.</p>
+                        <p className=''>Start adding memories of you and your friends on Reflectify.</p>
+                    </div>
                     <div className='flex gap-7'>
                         <a href="#_" className="relative inline-block text-lg group">
                             <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-[#FFE500] rounded-lg group-hover:text-white">
@@ -26,7 +28,7 @@ export default function Landing2() {
                         </a>
                     </div>
                 </div>
-                <Image src="/images/footer-bo.webp" alt="animated logo" width={500} height={500} className='m-10 invert' />
+                <Image src="/images/footer-bo.webp" alt="animated logo" width={300} height={300} className='m-10 invert xl:w-96 lg:w-80' />
             </div>
         </>
     )

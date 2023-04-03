@@ -5,8 +5,8 @@ import Image from 'next/image'
 export default function Footer() {
     return (
         <>
-            <div className="bg-purple-800">
-                <footer className=" bg-[#FFE500] rounded-t-[10%]  ">
+           
+                <footer className=" bg-[#FFE500]  ">
                     <div className="flex justify-between items-start flex-wrap">
                         <div className="flex flex-col m-20 justify-center items-start">
                             <h1 className="text-2xl font-bold ">About</h1>
@@ -55,7 +55,7 @@ export default function Footer() {
                             </ul>
                         </div>
                     </div>
-                    <div className="flex justify-center items-center text-4xl gap-12">
+                    <div className="flex justify-center items-center text-4xl gap-7 sm:gap-11 lg:gap-12 xl:gap-14">
                         <button className="bg-white p-2 rounded-full"><AiOutlineInstagram /></button>
                         <button className="bg-white p-2 rounded-full"><AiOutlineTwitter /></button>
                         <button className="bg-white p-2 rounded-full"><AiOutlineYoutube /></button>
@@ -68,7 +68,7 @@ export default function Footer() {
                     </div>
 
                 </footer>
-            </div>
+           
         </>
     )
 }
