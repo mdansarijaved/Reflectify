@@ -1,18 +1,38 @@
-
-import { AiOutlineMenu } from "react-icons/ai";
+import { useRef, useState } from "react";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import Image from 'next/image'
+import MainMenu from "./MainMenu";
 
 
 export default function Header() {
+    const [isVisible,setVisibility]=useState(false)
+    const shownavbar = () => {
+        setVisibility(!isVisible)
+        console.log("clicked")
+    }
+
+
     return (
-        // <div className="bg-[url('/images/hero.jpg')]">
-         <div className="relative isolate">
-             <Image src="/images/hero.jpg" priority width={1920} height={1080} className="absolute top-0 left-0 w-full h-full -z-10 object-cover " />
-            <main className=' p-4 sticky top-0'>
-                <header className='flex  items-center '>
-                    <button>
-                        <AiOutlineMenu className='text-4xl text-[#FFe34a]    ' />
+        <>
+        
+        <div 
+        onClick={()=>{
+            if(isVisible)
+            setVisibility(false)
+        }}
+        className={`z-[999] transition-opacity duration-200 bg-black/30  fixed ${isVisible?"  opacity-100 pointer-events-auto ": "pointer-events-none opacity-0 "} w-screen h-screen top-0 left-0 `}/>
+
+                         <MainMenu state={isVisible} toggle={setVisibility} />
+                    
+        
+        <div className="relative isolate">
+            <Image src="/images/hero.jpg" priority width={1920} height={1080} className="absolute top-0 left-0 w-full h-full -z-10 object-cover " />
+            <main className=' p-4 sticky top-0 '>
+                <header className='flex  items-center  '>
+                    <button >
+                        <AiOutlineMenu className='text-4xl text-[#FFe34a]' onClick={shownavbar} />
                     </button>
+                    
                     <div className='flex-1'>
                         <Image src="/images/logo.svg" alt="logo" width={180} height={100} className=' invert m-auto ' />
                     </div>
@@ -37,5 +57,6 @@ export default function Header() {
                 </div>
             </div>
         </div>
+        </>
     )
 }

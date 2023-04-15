@@ -13,6 +13,8 @@ export default function Home() {
     <>
       <section className=''>
        <Landing/>
+       
+      
        <Landing2/>
        <Landing3/>
        <Landing4 /> 
