@@ -8,7 +8,8 @@ import Landing3 from '@/components/Landing3';
 import Landing4 from '@/components/Landing4';
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Home(props) {
+  console.log(props)
   return (
     <>
       <section className=''>

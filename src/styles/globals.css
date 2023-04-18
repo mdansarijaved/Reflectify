@@ -2,3 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+
+    .cl-userButtonPopoverFooter.cl-internal-y2rcgc{
+        display: none;
+    }
+    .cl-userButtonPopoverActionButtonText,
+    .cl-userButtonPopoverActionButtonText,
+    .cl-userButtonPopoverActionButtonIcon,
+    .cl-userButtonPopoverActionButtonIcon
+    {
+        color: black;
+    }

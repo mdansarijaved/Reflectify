@@ -56,12 +56,10 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className="flex justify-center items-center text-4xl gap-7 sm:gap-11 lg:gap-12 xl:gap-14">
-                        <button className="bg-white p-2 rounded-full"><AiOutlineInstagram /></button>
-                        <button className="bg-white p-2 rounded-full"><AiOutlineTwitter /></button>
-                        <button className="bg-white p-2 rounded-full"><AiOutlineYoutube /></button>
-                        <button className="bg-white p-2 rounded-full"><AiFillLinkedin /></button>
-
-
+                        <button className="bg-white p-2 transition rounded-full hover:bg-black group"><AiOutlineInstagram className="group-hover:invert transition" /></button>
+                        <button className="bg-white p-2 transition rounded-full hover:bg-black group"><AiOutlineTwitter className="group-hover:invert transition" /></button>
+                        <button className="bg-white p-2 transition rounded-full hover:bg-black group"><AiOutlineYoutube className="group-hover:invert transition" /></button>
+                        <button className="bg-white p-2 rounded-full hover:bg-black group"><AiFillLinkedin className="group-hover:invert transition"    /></button>
                     </div>
                     <div className="flex justify-evenly items-center py-8">
                         <h1 className="text-xl ">Made with love in India.</h1>
