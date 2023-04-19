@@ -12,13 +12,12 @@ export default function Home(props) {
   console.log(props)
   return (
     <>
+      
       <section className=''>
        <Landing/>
-       
-      
        <Landing2/>
        <Landing3/>
-       <Landing4 /> 
+       <Landing4/> 
        <Footer/>
       </section>
 

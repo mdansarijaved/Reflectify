@@ -25,6 +25,9 @@ dependencies:
   sharp:
     specifier: ^0.32.0
     version: 0.32.0
+  smart-webcomponents-react:
+    specifier: ^15.0.3
+    version: 15.0.3
 
 devDependencies:
   autoprefixer:
@@ -1373,6 +1376,10 @@ packages:
     resolution: {integrity: sha512-JA//kQgZtbuY83m+xT+tXJkmJncGMTFT+C+g2h2R9uxkYIrE2yy9sgmcLhCnw57/WSD+Eh3J97FPEDFnbXnDUg==}
     dependencies:
       is-arrayish: 0.3.2
+    dev: false
+
+  /smart-webcomponents-react@15.0.3:
+    resolution: {integrity: sha512-SlPnfESPFS2ylE4WuZD1X2XXJBvD0bRtfoZjH58QDx0hoHJIgpRamLuI++3xb39hyeaxY8X6+pI/K2tvl1oanQ==}
     dev: false
 
   /snake-case@3.0.4:

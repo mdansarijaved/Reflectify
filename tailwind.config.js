@@ -7,8 +7,16 @@ module.exports = {
     extend: {
       fontFamily:{
         alkami:["var(--font-alkami)"]
+      },
+      colors:{
+        'primary': '#ffe30a'
       }
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant('child', '& > *');
+      addVariant('child-hover', '& > *:hover');
+  }
+  ],
 }
