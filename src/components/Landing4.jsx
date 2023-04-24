@@ -4,7 +4,7 @@ export default function Landing4() {
     return (
         <>
 
-            <div className='flex bg-[#151400] justify-center flex-wrap items-center gap-7 py-24'>
+            <div className='flex bg-black justify-center flex-wrap items-center gap-7 py-24'>
                 <Cards />
                 <Cards />
                 <Cards />
