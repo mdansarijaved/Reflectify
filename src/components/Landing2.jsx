@@ -17,7 +17,7 @@ export default function Landing2() {
                     </Link>
                     
                 </div>
-                <Image src="/images/footer-bo.webp" alt="animated logo" width={300} height={300} className='m-10 invert xl:w-96 lg:w-80' />
+                <Image src="/images/study.svg" alt="animated logo" width={300} height={300} className='m-10 invert xl:w-96 lg:w-80' />
             </div>
         </>
     )

@@ -2,8 +2,7 @@ import Image from "next/image";
 import { AiOutlineClose } from 'react-icons/ai'
 export default function MainMenu({state, toggle }) {
     return (
-        <div 
-        className={`fixed z-[99999] bg-[#FFE500] px-12 h-screen w-screen sm:w-fit top-0  left-0 transition-transform duration-1000 ease-in-out ${!state?"-translate-x-full ":"  "} `}>
+        <div className={`fixed z-[99999] bg-[#FFE500] px-12 h-screen w-screen sm:w-fit top-0  left-0 transition-transform duration-1000 ease-in-out ${!state?"-translate-x-full ":"  "} `}>
             
                 
                     <button onClick={()=>{toggle(false)}} className="flex items-center text-3xl font-semibold py-9 gap-3">
