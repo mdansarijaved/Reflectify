@@ -29,7 +29,7 @@ export default function Header() {
             <div className="relative isolate">
                 <Image src="/images/hero.jpg" priority width={1920} height={1080} className="absolute top-0 left-0 w-full h-full -z-10 object-cover " />
                 <main className=' p-4 sticky top-0 '>
-                    <header className='flex  items-center  '>
+                    <header className='flex  items-center px-9 '>
                         <button >
                             <AiOutlineMenu className='text-4xl text-[#FFe34a]' onClick={shownavbar} />
                         </button>
