@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { use, useState } from 'react'
 import Landing from './Landing'
 import Image from 'next/image'
 import Dailyplanner from './Dailyplanner'
@@ -8,7 +8,19 @@ import Footer from './Footer'
 
 
 
+
+
+
 function Diary1() {
+
+    const [btnValue, setbtnValue] = useState(1)
+
+    const handleclick = (index) => {
+        setbtnValue(index);
+        console.log(index)
+    }
+
+    let toggleClass = btnValue ? 'bg-blue-500 rounded-xl py-3 px-7' : 'bg-white hover:bg-white/75 rounded-xl py-3 px-7'
 
     return (
         <>
@@ -16,29 +28,23 @@ function Diary1() {
                 <header className='flex justify-center items-center'>
                     <Image src={'/images/logo.svg'} height={120} width={230} alt='logo' />
                 </header>
+                <hr />
 
-                
+                <div className='flex justify-center gap-12 mt-12   '>
+                    <button onClick={() => handleclick(1)} className={btnValue === 1 ? 'bg-black text-white font-semibold rounded-xl py-3 px-7' : 'bg-white text-black rounded-xl font-semibold py-3 px-7'}>Journal</button>
+                    <button onClick={() => handleclick(2)} className={btnValue === 2 ? 'bg-black text-white font-semibold rounded-xl py-3 px-7' : 'bg-white text-black rounded-xl font-semibold py-3 px-7'}>Monthly Planner</button>
+                    <button onClick={() => handleclick(3)} className={btnValue === 3 ? 'bg-black text-white font-semibold rounded-xl py-3 px-7' : 'bg-white text-black font-semibold rounded-xl py-3 px-7'}>Habit Tracker</button>
 
-                <div className='flex gap-9 '>
-                <div className=' overflow-clip rounded-lg w-64 h-fit  bg-white ml-5 mt-4 text-2xl  child:px-4 child:py-3 child-hover:bg-primary  child:transition child:duration-300 '>
-                    <div className=''>
-                        <button>Diary</button>
+                </div>
+                <div className='grid place-items-center mt-12'>
+                    <div className={btnValue === 1 ? 'flex justify-center' : 'hidden'}>
+                        <Dailyplanner />
                     </div>
-                    {/* <hr className='border-1 border-gray-300' /> */}
-                    
-                    <div className=''>
-                        <button className='' >Monthly Planner</button>
-                    </div>
-                    {/* <hr className='border-1 border-gray-300' /> */}
-                    <div className=''>
-                        <button>Habit Tracker</button>
+                    <div className={btnValue === 2 ? 'flex justify-center' : 'hidden'}>
+                        <Editablefield />
                     </div>
                 </div>
-                <div>
-                <Dailyplanner />
-                </div>
-                </div>
-                <Footer/>
+                <Footer />
             </div>
         </>
     )
@@ -52,8 +58,8 @@ function Editablefield() {
         <>
 
 
-            <section className='bg-red-500 h-[590px] m-5'>
-                <span className='' contentEditable='true'>Start adding your day </span>
+            <section className='bg-red-500 min-h-screen text-white  m-5'>
+                <span className='' contentEditable='true'>Start adding your day</span>
             </section>
 
         </>
