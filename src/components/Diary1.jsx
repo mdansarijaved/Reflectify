@@ -38,10 +38,10 @@ function Diary1() {
                 </div>
                 <div className='grid place-items-center mt-12'>
                     <div className={btnValue === 1 ? 'flex justify-center' : 'hidden'}>
-                        <Dailyplanner />
+                    <Editablefield />
                     </div>
                     <div className={btnValue === 2 ? 'flex justify-center' : 'hidden'}>
-                        <Editablefield />
+                        <Dailyplanner />
                     </div>
                 </div>
                 <Footer />
@@ -53,15 +53,10 @@ function Diary1() {
 export default Diary1
 
 
-function Editablefield() {
+const Editablefield=()=> {
     return (
         <>
-
-
-            <section className='bg-red-500 min-h-screen text-white  m-5'>
-                <span className='' contentEditable='true'>Start adding your day</span>
-            </section>
-
+            
         </>
     )
 }
