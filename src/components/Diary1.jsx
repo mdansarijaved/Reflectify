@@ -3,12 +3,7 @@ import Landing from './Landing'
 import Image from 'next/image'
 import Dailyplanner from './Dailyplanner'
 import Footer from './Footer'
-
-
-
-
-
-
+import { SignIn, SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
 
 
 function Diary1() {
@@ -20,29 +15,41 @@ function Diary1() {
         console.log(index)
     }
 
-    let toggleClass = btnValue ? 'bg-blue-500 rounded-xl py-3 px-7' : 'bg-white hover:bg-white/75 rounded-xl py-3 px-7'
+
 
     return (
         <>
             <div className='bg-primary '>
-                <header className='flex justify-center items-center'>
+                <header className='flex justify-between items-center px-8'>
+                  
+
                     <Image src={'/images/logo.svg'} height={120} width={230} alt='logo' />
+                    
+                    
+
+                    <SignedIn>
+                            <UserButton
+                                appearance={{
+                                    userProfile: { elements: { modalBackdrop: "bg-slate-500" } },
+                                }} />
+                        </SignedIn>
+                                
                 </header>
                 <hr />
 
                 <div className='flex justify-center gap-12 mt-12   '>
-                    <button onClick={() => handleclick(1)} className={btnValue === 1 ? 'bg-black text-white font-semibold rounded-xl py-3 px-7' : 'bg-white text-black rounded-xl font-semibold py-3 px-7'}>Journal</button>
-                    <button onClick={() => handleclick(2)} className={btnValue === 2 ? 'bg-black text-white font-semibold rounded-xl py-3 px-7' : 'bg-white text-black rounded-xl font-semibold py-3 px-7'}>Monthly Planner</button>
-                    <button onClick={() => handleclick(3)} className={btnValue === 3 ? 'bg-black text-white font-semibold rounded-xl py-3 px-7' : 'bg-white text-black font-semibold rounded-xl py-3 px-7'}>Habit Tracker</button>
+                    <button onClick={() => handleclick(1)} className={btnValue === 1 ? 'bg-black border-2 border-white text-white text-xl font-semibold rounded py-3 px-7' : 'bg-white text-black rounded-xl font-semibold py-3 px-7'}>Monthly Planner</button>
+                    {/* <button onClick={() => handleclick(2)} className={btnValue === 2 ? 'bg-black text-white font-semibold rounded-xl py-3 px-7' : 'bg-white text-black rounded-xl font-semibold py-3 px-7'}></button>
+                    <button onClick={() => handleclick(3)} className={btnValue === 3 ? 'bg-black text-white font-semibold rounded-xl py-3 px-7' : 'bg-white text-black font-semibold rounded-xl py-3 px-7'}></button> */}
 
                 </div>
                 <div className='grid place-items-center mt-12'>
                     <div className={btnValue === 1 ? 'flex justify-center' : 'hidden'}>
-                    <Editablefield />
-                    </div>
-                    <div className={btnValue === 2 ? 'flex justify-center' : 'hidden'}>
                         <Dailyplanner />
                     </div>
+                    {/* <div className={btnValue === 2 ? 'flex justify-center' : 'hidden'}>
+                        <Editablefield />
+                    </div> */}
                 </div>
                 <Footer />
             </div>
@@ -53,10 +60,10 @@ function Diary1() {
 export default Diary1
 
 
-const Editablefield=()=> {
+const Editablefield = () => {
     return (
         <>
-            
+
         </>
     )
 }
